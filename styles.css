@@ -1,0 +1,269 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-bg{
+    background: #307D99 url('bg.jpg');
+    color: white;
+    text-align: center;
+    padding-bottom: 4em;
+    background-position: 12% 83%;
+}
+
+header{
+    padding: 1em 0;
+}
+
+.hero-bg a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.top{
+    margin: 0 1em;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 2em 0 1.2em;
+}
+
+h1 span{
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+h1 span::before{
+    content: '';
+    position: absolute;
+    background: #00BFFF;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;
+    width: 5em;
+}
+
+.hero-bg p{
+    font-weight: bold;
+    margin: 0 1em 3em;
+}
+
+.form-container{
+    background-color: white;
+    color: black;
+    margin: 2em -1em 0;
+    padding: 2em;
+}
+
+label{
+    color: #2D7D98;
+    font-weight: bold;
+    display: block;
+    margin: 0 0 1em;
+    font-size: 1.2rem;
+}
+
+input[type=text]{
+    border: 1px solid #707070;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: .5em;
+    margin: 1.2em 0 0;
+}
+
+.form-container p{
+    color: #707070;
+    font-weight: 400;
+    margin-bottom: 1.2em;
+    margin-top: .3em;
+    font-size: .9em;
+}
+
+input[type=button]{
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: 1px solid;
+    background-color: #F89104;
+    border-radius: .5em;
+    width: 100%;
+    padding: 1em 0;
+    cursor: pointer;
+}
+
+input[type=button]:hover{
+    background-color:#e48704;
+}
+
+.authentic{
+    margin: 0;
+}
+
+.right-col{
+    text-align: center;
+    margin: 3em 1em;
+}
+
+.authentic h2{
+    text-transform: uppercase;
+    z-index: 1;
+    position: relative;
+}
+
+h2::before{
+    content: '';
+    position: absolute;
+    height: 0.4em;
+    width: 5em;
+    background: #00BFFF;
+    z-index: -1;
+    margin-top: 0.8em;
+    margin-left: -.3em;
+}
+
+.authentic img{
+    width: 100%;
+}
+
+.authentic p{
+    line-height: 2em;
+}
+
+footer{
+    color: rgba(0, 0, 0, .5);
+    text-align: center;
+    margin-top: 0;
+}
+
+/* OVERLAY ANIMATION
+
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
+    place-content: center;
+    display: grid;
+    color: white;
+    z-index: 1;
+    display: none;
+}
+
+.animate-overlay{
+    animation: overlay 3d forwards;
+}
+
+@keyframes overlay{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+*/
+
+@media (min-width: 730px){
+
+    .top{
+    margin: 0 4em;
+}
+
+    .form-container{
+    margin: 2em -4em 0;
+    padding: 2em;
+}
+}
+
+@media (min-width: 930px){
+
+    .hero-bg{
+        text-align: left;
+    }
+
+    .hero-bg p{
+        margin: 0 0 3em;
+    }
+
+    .hero-bg section{
+        border-radius: .5em;
+        width: 65%;
+    }
+
+    .form-container{
+
+        margin: 2em 0 0;
+        padding: 2em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 5px rgba(0,0,0,.2);
+    }
+
+    form{
+        display: flex;
+    }
+
+    .form-left{
+        width: 70%;
+    }
+
+    input[type=button]{
+        height: fit-content;
+        font-size: 1.1rem;
+        margin-top: 3.3em;
+        margin-left: 1em;
+        padding: .65em 0;
+        width: 30%;
+    }
+
+    .hero-bg p{
+        margin-top: .5em;
+        margin-bottom: 0;
+    }
+
+    section.authentic{
+        display:grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas: 'img text';
+        /*box-shadow: 0px -10px 10px rgba(0, 0, 0, .2);*/
+    }
+
+    .right-col{
+        grid-area: text;
+        padding: 0 10%;
+        text-align: left;
+    }
+
+    .img{
+        grid-area: img;
+    }
+}
+
+.top{
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateX(-20em);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
